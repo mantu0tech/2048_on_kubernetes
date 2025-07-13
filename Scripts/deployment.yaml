@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 2048-deployment
+  name: mario-deployment
 spec:
   replicas: 2  # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: 2048
+      app: mario
   template:
     metadata:
       labels:
-        app: 2048
+        app: mario
     spec:
       containers:
-      - name: 2048-container
+      - name: mario-container
         image: allenaira/2048:latest 
         ports:
         - containerPort: 80
